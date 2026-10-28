@@ -1,79 +1,86 @@
-Create a complete, detailed, and professional README.md file for my GitHub project named **BiteMind-AI**.
+# Food Verse AI — Multimodal Food Intelligence Agent
 
-**Project Title:** BiteMind-AI – Multimodal Food Intelligence Agent
+A responsive multi-view frontend concept for exploring food intelligence. The dashboard presents a sample meal, estimated nutrition, ingredient recognition, meal-quality insights, a conversational assistant, hydration tracking, and a weekly summary.
 
-**Project Description:**
-BiteMind-AI is an AI-powered food intelligence web application designed to provide food-related insights, food recognition features, nutrition information, and smart food recommendations through a modern and user-friendly interface.
+> **Prototype notice:** This repository currently contains a static UI demo, not a connected multimodal AI agent. The meal analysis and weekly data are illustrative sample content. Chat answers are selected from local canned responses. Meal scanning, history, ingredient editing, and detailed nutrition controls show preview messages. Hydration updates only in the current page session and resets when the page reloads. Do not use the displayed nutrition values for medical or dietary decisions.
 
-Write the README in professional English with clean Markdown formatting. Include the following sections:
+## Features in this demo
 
-1. **Project Title and Introduction**
-   - Introduce BiteMind-AI.
-   - Explain its purpose and the problem it aims to solve.
-   - Make the introduction suitable for a college AI/ML project and a developer portfolio.
+- Responsive dashboard layout for desktop and mobile screens
+- Sample meal card with recognized ingredient labels
+- Illustrative calorie, macronutrient, and meal-quality summaries
+- Local demo chat with prompt chips and keyword-matched sample answers
+- Session-only hydration counter, capped at the displayed daily goal
+- Navigation feedback for sections that are not implemented yet
+- Dynamic date display using the browser's local date
 
-2. **Key Features**
-   - Food intelligence and food-related insights.
-   - Food recognition, if implemented.
-   - Nutrition information and food recommendations, if implemented.
-   - Responsive and user-friendly interface.
-   - Any other features actually present in the project.
+## Tech stack
 
-3. **Project Objectives**
-   - Explain the goals of building an AI-powered food application.
-   - Describe how it can help users make informed food choices.
+- HTML5
+- CSS3 (embedded in `index.html`)
+- Vanilla JavaScript (embedded in `index.html`)
+- Google Fonts and an Unsplash-hosted food image loaded from the web
 
-4. **Technology Stack**
-   - List the actual technologies used in the project, such as HTML, CSS, JavaScript, and AI/ML tools if present.
-   - Do not claim that a technology or AI model is integrated unless the source code confirms it.
+No build system, package manager, server, or Python dependencies are required. `requirements.txt` is intentionally omitted because the project does not use Python. No API keys or environment variables are used, so `.env.example` is not needed.
 
-5. **Project Structure**
-   - Show the actual folder and file structure.
-   - Explain the purpose of each important file.
-   - Do not invent files that do not exist.
+## Run locally
 
-6. **Getting Started**
-   - Explain how to download or clone the repository.
-   - Provide simple steps to open and run the project locally.
-   - Include the correct commands wherever applicable.
+1. Clone the repository:
 
-7. **How to Use**
-   - Explain the application's workflow step by step based on its actual implementation.
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/food-verse-ai.git
+   cd food-verse-ai
+   ```
 
-8. **Screenshots**
-   - Add a section with placeholders for screenshots that I can add later.
-   - Do not create fake screenshot links.
+2. Open `index.html` directly in a current browser, or use a simple local static server if you prefer:
 
-9. **Future Improvements**
-   - Suggest possible improvements such as real-time food image recognition, nutrition analysis, personalized recommendations, and AI integration.
-   - Clearly distinguish planned features from existing features.
+   ```bash
+   python -m http.server 8000
+   ```
 
-10. **Use Cases**
-    - Explain practical applications of the project.
+3. Visit `http://localhost:8000`.
 
-11. **Learning Outcomes**
-    - Describe the web development, problem-solving, and AI/ML concepts demonstrated by the project, where applicable.
+The Google Fonts and Unsplash image need an internet connection. If they cannot load, the page remains usable with fallback fonts and a plain meal-image background color.
 
-12. **Contributing**
-    - Provide simple instructions for contributing to the project.
+## Usage
 
-13. **License**
-    - Recommend an appropriate open-source license, but do not claim a license has been added unless the corresponding LICENSE file exists.
+- Review the pre-filled sample meal and its nutrition cards.
+- Ask the demo assistant about protein, fiber, snacks, or vitamin C; it responds with local sample text.
+- Select **Add a glass** to update the hydration figure for the current page session.
+- Use **Scan a meal**, **View history**, **Edit ingredients**, and **Details** to see prototype preview messages.
 
-14. **Author**
-    - Use a placeholder for my name and optional GitHub profile URL. Do not invent personal links.
+## Screenshots
 
-15. **Acknowledgements**
-    - Include a short, professional acknowledgement section where appropriate.
+Add screenshots here before publishing, for example:
 
-**Formatting Requirements:**
-- Use professional GitHub README Markdown.
-- Add a table of contents with working internal links.
-- Use headings, bullet points, tables, and code blocks appropriately.
-- Add relevant emojis sparingly.
-- Make the README visually appealing, organized, beginner-friendly, and recruiter-friendly.
-- Avoid exaggerated claims, fake statistics, unsupported performance metrics, and misleading AI capabilities.
-- Keep all descriptions consistent with the actual source code.
+```markdown
+![Food Verse AI dashboard](screenshots/dashboard.png)
+```
 
-**Important Instructions:**
-First inspect the existing project files, especially index.html and any CSS or JavaScript files. Then generate the README.md based on the actual implementation. Do not modify the application's existing code or design. Create only the README.md file and ensure it is ready to upload to my GitHub repository.
+Capture the page at desktop and mobile widths and save the images in a `screenshots/` directory.
+
+## Project structure
+
+```text
+food-verse-ai/
+├── index.html     # Complete static dashboard and interactions
+├── README.md      # Project overview and setup guide
+└── .gitignore     # Local secrets, environments, and generated files
+```
+
+## GitHub Pages
+
+This is a static site and can be published with GitHub Pages from the repository root. In the repository settings, choose **Pages**, select the `main` branch and `/ (root)` as the source, then save.
+
+## Roadmap
+
+- Connect image upload/camera capture to a food recognition model
+- Replace sample nutrition values with a sourced nutrition database
+- Connect chat to a multimodal model through a secure backend
+- Persist meals, user preferences, and hydration history
+- Add validation, privacy controls, and tests for connected features
+
+## License
+
+No license is included yet. Add a license before accepting contributions or allowing reuse.
+
